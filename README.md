@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Planificador de Gastos con Context API y UseReducer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto consiste en desarrollar un **planificador de gastos** utilizando **React** con **Context API** y **useReducer**. La aplicación permite **crear**, **actualizar**, **eliminar** y **visualizar detalles** de los gastos, así como filtrarlos por categoría. Incorpora **ventanas modales** creadas con **Headless UI**, un componente de React que facilita la creación de modales interactivos.
 
-Currently, two official plugins are available:
+## Tabla de Contenido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Planificador de Gastos con Context API y useReducer](#planificador-de-gastos-con-context-api-y-usereducer)
+  - [Funcionalidades de la Aplicación](#-funcionalidades-de-la-aplicación)
+  - [Configuración del Proyecto](#️-configuración-del-proyecto)
+  - [Desarrollo de la Interfaz](#️-desarrollo-de-la-interfaz)
+  - [Tabla de Contenido](#tabla-de-contenido)
+- [Creación de proyecto](docs/creacion-proyecto.md)
+- [Introducción a Context API](docs/introduccion-a-context-api.md)
+- [Implemetar editar y eliminar con Swipe](docs/implemetar-editar-y-eliminar.md)
+- [Agregando Grafica interactiva y Ultimos ajustes](docs/grafica-interactiva.md)
 
-## Expanding the ESLint configuration
+## 📋 Funcionalidades de la Aplicación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Gestión de Gastos**: Crear, actualizar, eliminar y consultar detalles de los gastos.
+- **Filtrado por Categoría**: Filtrar los gastos según categorías específicas.
+- **Ventanas Modales**: Usar modales para formularios y confirmaciones, implementados con Headless UI.
+- **Estado Global**: Gestionar el estado de la aplicación con **Context API** y **useReducer**, evitando pasar `state` y `dispatch` a través de props.
 
-- Configure the top-level `parserOptions` property like this:
+> **Nota**: Este proyecto pone en práctica conceptos avanzados de React aprendidos previamente, como la gestión de estado global y el diseño de interfaces modernas.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+  [🔝 Volver al inicio](#planificador-de-gastos-con-context-api-y-usereducer)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🛠️ Configuración del Proyecto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Crear el Proyecto y Descargar Materiales
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Repetimos los pasos realizados en la clase anterior para crear el proyecto de React. Descargamos los materiales necesarios:
+    - **Carpeta de Iconos SVG**: Descarga los íconos SVG que se usarán en la aplicación.
+    - Copia la carpeta de íconos a la carpeta `public` del proyecto.
+
+### Instalar Tailwind CSS
+
+Seguimos los pasos de la clase anterior para instalar **Tailwind CSS**:
+    1. Instala las dependencias necesarias.
+    2. Configura Tailwind CSS en el proyecto.
+    3. Asegúrate de que las clases de Tailwind funcionen correctamente.
+
+> **Tip**: Verifica la instalación aplicando una clase de Tailwind (como `bg-blue-500`) a un componente.
+
+  [🔝 Volver al inicio](#planificador-de-gastos-con-context-api-y-usereducer)
+
+## 🖼️ Desarrollo de la Interfaz
+
+Trabajamos en la interfaz del proyecto utilizando **React** y **Tailwind CSS**. Los pasos incluyen:
+    - Diseñar una lista de gastos con opciones para editar y eliminar.
+    - Implementar formularios en ventanas modales con **Headless UI** para agregar o modificar gastos.
+    - Crear un componente de filtrado por categoría.
+    - Aplicar estilos con **Tailwind CSS** para una interfaz moderna y responsiva.
+
+> **Nota**: Este proyecto es completo y permite practicar todos los conceptos aprendidos en la clase anterior, incluyendo componentes reutilizables, gestión de estado y diseño de interfaces.
+
+  [🔝 Volver al inicio](#planificador-de-gastos-con-context-api-y-usereducer)
